@@ -1,0 +1,8 @@
+logging:
+  level:
+    root: INFO
+    com.dxc.apigateway: OFF
+    org.springframework.web: WARN
+    org.springframework.security: WARN
+    org.hibernate.SQL: OFF
+    org.hibernate.type.descriptor.sql.BasicBinder: OFF

@@ -1,0 +1,7 @@
+logging:
+  level:
+    root: INFO
+    com.dxc.apigateway: DEBUG
+    org.springframework.security: DEBUG
+    org.springframework.security.oauth2: DEBUG
+    org.springframework.cloud.gateway: DEBUG
