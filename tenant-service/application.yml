@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: ${DB_URL}
-    username: ${DB_USERNAME}
-    password: ${DB_PASSWORD}
+    url: ${DB_URL:jdbc:postgresql://localhost:5433/tenant_db}
+    username: ${DB_USERNAME:postgres}
+    password: ${DB_PASSWORD:postgres}
     driver-class-name: org.postgresql.Driver
     hikari:
       maximum-pool-size: 10
@@ -22,5 +22,18 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: ${KEYCLOAK_URL}
+          issuer-uri: ${KEYCLOAK_ISSUER_URL:http://localhost:8079/realms/prolance}
 
+keycloak:
+  base-url: ${KEYCLOAK_BASE_URL:http://localhost:8079}
+  realm: ${KEYCLOAK_REALM:prolance}
+  admin:
+    client-id: ${KEYCLOAK_ADMIN_CLIENT_ID:tenant-service-client}
+    client-secret: ${KEYCLOAK_ADMIN_CLIENT_SECRET}
+  user:
+    client-id: ${KEYCLOAK_ADMIN_CLIENT_ID:angular-service}
+
+logging:
+  level:
+    com.aliyara.companyservice: DEBUG
+  
