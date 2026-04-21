@@ -5,3 +5,9 @@ spring:
         jwt:
           issuer-uri: ${APP_KEYCLOAK_URL}
           jwk-set-uri: ${APP_KEYCLOAK_URL}/protocol/openid-connect/certs
+          
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,beans,refresh

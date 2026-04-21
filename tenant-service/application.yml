@@ -36,4 +36,9 @@ keycloak:
 logging:
   level:
     com.aliyara.companyservice: DEBUG
-  
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,beans,refresh
