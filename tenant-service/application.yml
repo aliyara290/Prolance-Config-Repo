@@ -12,7 +12,7 @@ spring:
     jpa:
       hibernate:
         ddl-auto: update
-      show-sql: false
+      show-sql: true
       properties:
         hibernate:
           dialect: org.hibernate.dialect.PostgreSQLDialect
@@ -24,8 +24,8 @@ spring:
         jwt:
           issuer-uri: ${KEYCLOAK_ISSUER_URL:http://localhost:8079/realms/prolance}
 
-  flyway:
-    enabled: false
+  # flyway:
+  #   enabled: false
 
 keycloak:
   base-url: ${KEYCLOAK_BASE_URL:http://localhost:8079}
