@@ -1,0 +1,9 @@
+
+logging:
+  level:
+    com.dxc.crmservice: OFF
+    root: INFO
+    org.springframework.web: WARN
+    org.springframework.security: WARN
+    org.hibernate.SQL: OFF
+    org.hibernate.type.descriptor.sql.BasicBinder: OFF
