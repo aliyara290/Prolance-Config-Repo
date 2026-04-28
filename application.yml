@@ -1,0 +1,7 @@
+services:
+  tenant-service:
+    url: http://localhost:8081/api/v1/
+    base-url: http://localhost:8081/
+  crm-service:
+    url: http://localhost:8082/api/v1/
+    base-url: http://localhost:8082/
