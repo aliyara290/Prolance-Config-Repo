@@ -1,7 +1,7 @@
 
 logging:
   level:
-    com.dxc.projectservice: OFF
+    com.dxc.taskservice: OFF
     root: INFO
     org.springframework.web: WARN
     org.springframework.security: WARN
