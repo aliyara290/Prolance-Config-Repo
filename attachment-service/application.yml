@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: ${DB_URL:jdbc:postgresql://localhost:5436/task_db}
-    username: ${DB_USERNAME:postgres}
-    password: ${DB_PASSWORD:postgres}
+    url: ${DB_URL:jdbc:postgresql://localhost:5438/attachment_db}
+    username: ${DB_USERNAME:aliyara29}
+    password: ${DB_PASSWORD:Yara2001}
     driver-class-name: org.postgresql.Driver
     hikari:
       maximum-pool-size: 10
@@ -23,12 +23,16 @@ spring:
         jwt:
           issuer-uri: ${KEYCLOAK_ISSUER_URL:http://localhost:8079/realms/prolance}
 
+  servlet:
+    multipart:
+      max-file-size: 25MB
+      max-request-size: 25MB
   # flyway:
   #   enabled: false
 
 logging:
   level:
-    com.dxc.taskservice: DEBUG
+    com.dxc.attachmentservice: DEBUG
 
 management:
   endpoints:
@@ -43,3 +47,13 @@ services:
   project-service:
     url: http://localhost:8083/api/v1/
     base-url: http://localhost:8083/
+
+eureka:
+  instance:
+    prefer-ip-address: true
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
