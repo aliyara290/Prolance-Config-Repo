@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: ${DB_URL:jdbc:postgresql://localhost:5438/attachments_db}
+    url: ${DB_URL:jdbc:postgresql://attachments-db:5432/attachments_db}
     username: ${DB_USERNAME:aliyara29}
     password: ${DB_PASSWORD:Yara2001}
     driver-class-name: org.postgresql.Driver
@@ -28,15 +28,6 @@ logging:
   level:
     com.dxc.attachmentservice: DEBUG
 
-management:
-  endpoints:
-    web:
-      exposure:
-        include: health,info,metrics,beans,refresh
-
-eureka:
-  instance:
-    prefer-ip-address: true
 
 springdoc:
   api-docs:
