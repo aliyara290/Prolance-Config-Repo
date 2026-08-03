@@ -24,8 +24,3 @@ logging:
   level:
     com.dxc.taskservice: DEBUG
 
-management:
-  endpoints:
-    web:
-      exposure:
-        include: health,info,metrics,beans,refresh
