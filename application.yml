@@ -15,7 +15,13 @@ services:
   project-service:
     url: http://project-service:8080/api/v1/
     base-url: http://project-service:8080/
-  
+    
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,beans,refresh
+        
 eureka:
   instance:
     prefer-ip-address: true
