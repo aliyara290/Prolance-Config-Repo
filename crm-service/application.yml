@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: ${DB_URL:jdbc:postgresql://localhost:5434/crm_db}
+    url: ${DB_URL:jdbc:postgresql://crm-db:5432/crm_db}
     username: ${DB_USERNAME:aliyara29}
     password: ${DB_PASSWORD:Yara2001}
     driver-class-name: org.postgresql.Driver
@@ -20,18 +20,3 @@ spring:
 
   # flyway:
   #   enabled: false
-
-logging:
-  level:
-    com.aliyara.companyservice: DEBUG
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: health,info,metrics,beans,refresh
-
-services:
-  tenant-service:
-    url: http://localhost:8081/api/v1/
-    base-url: http://localhost:8081/
