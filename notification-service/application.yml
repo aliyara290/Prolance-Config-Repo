@@ -25,20 +25,3 @@ logging:
   level:
     com.dxc.taskservice: DEBUG
 
-management:
-  endpoints:
-    web:
-      exposure:
-        include: health,info,metrics,beans,refresh
-
-services:
-  tenant-service:
-    url: http://localhost:8081/api/v1/
-    base-url: http://localhost:8081/
-  project-service:
-    url: http://localhost:8083/api/v1/
-    base-url: http://localhost:8083/
-
-eureka:
-  instance:
-    prefer-ip-address: true
