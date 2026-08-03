@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: ${DB_URL:jdbc:postgresql://localhost:5433/tenant_db}
+    url: ${DB_URL:jdbc:postgresql://tenant-db:5432/tenant_db}
     username: ${DB_USERNAME:aliyara29}
     password: ${DB_PASSWORD:Yara2001}
     driver-class-name: org.postgresql.Driver
@@ -33,9 +33,3 @@ keycloak:
 logging:
   level:
     com.aliyara.companyservice: DEBUG
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: health,info,metrics,beans,refresh
