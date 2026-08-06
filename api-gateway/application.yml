@@ -1,11 +1,11 @@
-spring:
-  security:
-    oauth2:
-      resourceserver:
-        jwt:
-          issuer-uri: http://localhost:8079/realms/myrealm
-          # This tells Spring Boot where to internally fetch the verification keys
-          jwk-set-uri: http://keycloak:8080/realms/myrealm/protocol/openid-connect/certs
+# spring:
+#   security:
+#     oauth2:
+#       resourceserver:
+#         jwt:
+#           issuer-uri: http://localhost:8079/realms/myrealm
+#           # This tells Spring Boot where to internally fetch the verification keys
+#           jwk-set-uri: http://keycloak:8080/realms/myrealm/protocol/openid-connect/certs
           
 management:
   endpoints:
