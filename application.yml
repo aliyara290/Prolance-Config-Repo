@@ -3,9 +3,9 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: http://localhost:8079/realms/myrealm
+          issuer-uri: http://localhost:8079/realms/prolance
           # This tells Spring Boot where to internally fetch the verification keys
-          jwk-set-uri: http://keycloak:8080/realms/myrealm/protocol/openid-connect/certs
+          jwk-set-uri: http://keycloak:8080/realms/prolance/protocol/openid-connect/certs
 
 services:
   tenant-service:
