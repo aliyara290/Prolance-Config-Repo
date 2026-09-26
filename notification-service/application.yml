@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: ${DB_URL:jdbc:postgresql://notification-db:5432/notification_db}
+    url: ${DB_URL:jdbc:postgresql://localhost:5437/notification_db}
     username: ${DB_USERNAME:aliyara29}
     password: ${DB_PASSWORD:Yara2001}
     driver-class-name: org.postgresql.Driver
@@ -17,7 +17,6 @@ spring:
         dialect: org.hibernate.dialect.PostgreSQLDialect
         format_sql: true
 
-
   # flyway:
   #   enabled: false
 
@@ -25,3 +24,6 @@ logging:
   level:
     com.dxc.taskservice: DEBUG
 
+eureka:
+  instance:
+    prefer-ip-address: true
