@@ -3,5 +3,5 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: http://api.dxcprolance.site/realms/prolance
+          issuer-uri: http://prolance-alb-development-8157882.eu-west-3.elb.amazonaws.com/realms/prolance
           jwk-set-uri: http://keycloak.prolance.local:8080/realms/prolance/protocol/openid-connect/certs
