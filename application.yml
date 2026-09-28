@@ -18,3 +18,8 @@ management:
 eureka:
   instance:
     prefer-ip-address: true
+spring:
+  cloud:
+    inetutils:
+      preferred-networks:
+        - 10.0
