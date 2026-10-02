@@ -32,7 +32,7 @@ logging:
 
 aws:
   s3:
-    bucket-name: ${AWS_S3_BUCKET:prolance-attachment}
-    access-key: ${AWS_ACCESS_KEY_ID}
-    secret-key: ${AWS_SECRET_ACCESS_KEY}
+    bucket-name: ${AWS_S3_BUCKET:prolance-attachment-eu-west-3}
+    access-key: ${AWS_ACCESS_KEY_ID:}
+    secret-key: ${AWS_SECRET_ACCESS_KEY:}
     region: ${AWS_REGION:eu-west-3}
