@@ -1,14 +1,3 @@
-services:
-  tenant-service:
-    url: http://tenant-service:8080/api/v1/
-    base-url: http://tenant-service:8080/
-  crm-service:
-    url: http://crm-service:8080/api/v1/
-    base-url: http://crm-service:8080/
-  project-service:
-    url: http://project-service:8080/api/v1/
-    base-url: http://project-service:8080/
-    
 management:
   endpoints:
     web:

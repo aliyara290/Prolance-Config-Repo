@@ -21,8 +21,6 @@ spring:
     multipart:
       max-file-size: 25MB
       max-request-size: 25MB
-  # flyway:
-  #   enabled: false
 
 logging:
   level:
@@ -31,3 +29,10 @@ logging:
     org.springframework.security: DEBUG
     org.hibernate.SQL: DEBUG
     org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+
+aws:
+  s3:
+    bucket-name: ${AWS_S3_BUCKET:prolance-attachment}
+    access-key: ${AWS_ACCESS_KEY_ID}
+    secret-key: ${AWS_SECRET_ACCESS_KEY}
+    region: ${AWS_REGION:eu-west-3}
